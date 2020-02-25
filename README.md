@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+this project is developed in ruby and vue js 
 
-Things you may want to cover:
+some invironment needed
+--------------------------
+ruby 2.7.0
+rails 6.0.0
+postgress 12.2
+node js 10.19.0
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+how to run it
+-----------------
+open backend and run to http://localhost:3000
+open frontend and run to http://localhost:8080
