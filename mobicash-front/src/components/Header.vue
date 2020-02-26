@@ -6,6 +6,10 @@
 
         <router-link to="/customers" class="link-grey px-2 no-underline text-white hover:text-white" v-if="signedIn()">Mobicash Assessment</router-link>
       </div>
+      <form method="GET" action="http://dev.mobivat.com:8080/vsdc_module/mobivat/api/product/productId?upc=224444445" v-if="signedIn()">
+        <input type="text" name="upc" class="search form-control" style="float:left;width:70%;" placeholder="search product by upc">&nbsp;
+        <input type="submit" class="btn btn-outline-light btn-sm" style="padding:6px" name="search_button" value="Search">
+      </form>&nbsp;
       <div>
         <router-link to="/" class="link-grey px-2 no-underline" v-if="!signedIn()">Sign in</router-link>
         <router-link to="/signup" class="link-grey px-2 no-underline" v-if="!signedIn()">Sign Up</router-link>

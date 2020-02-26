@@ -23,6 +23,17 @@
           <button class="bg-transprent text-sm hover:bg-red text-red hover:text-white no-underline font-bold py-2 px-4 rounded border border-red"
          @click.prevent="removeCustomer(customer)">Delete</button></td>
     </tr>
+    <div v-if="customer == editedCustomer" style="width:100%">
+            <form action="" @submit.prevent="updateCustomer(customer)">
+              <div class="mb-6 p-4 bg-white rounded border border-grey-light mt-4">
+                <input class="input form-control" v-model="customer.name" /><br>
+                <input class="input form-control" v-model="customer.phone" /><br>
+                <input class="input form-control" v-model="customer.dob" /><br>
+                <input class="input form-control" v-model="customer.nationality" /><br>
+                <input type="submit" value="Update" class="btn-info text-sm hover:bg-blue hover:text-white text-blue border border-blue no-underline font-bold py-2 px-4 rounded cursor-pointer">
+              </div>
+            </form>
+          </div>
   </tbody>
     </table>
       <form class="w-full max-w-sm" method="GET" action="http://localhost:3000/api/v1/customerpdf">
@@ -30,8 +41,6 @@
            <input type="submit"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" name="search_button" value="Print pdf">
         </div>
       </form>
-          <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="upc" v-model="upc" placeholder="enter upc" aria-label="Full name">
-          <p>{{ productUser }}</p><p>{{ productId }}</p><p> {{ productName }}</p><p>{{ productCopmleted }}</p>
         </div>
 </template>
 

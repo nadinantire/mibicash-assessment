@@ -1,7 +1,7 @@
 module Api
   module V1 
     class CustomersController < ApplicationController
-      before_action :set_customer, only: [:show, :update, :destroy]
+      before_action :set_customer, only: [:show, :update, :destroy, :edit]
 
       
       def index
@@ -44,6 +44,9 @@ module Api
       # DELETE /customers/1
       def destroy
         @customer.destroy
+      end
+      def edit
+        
       end
 
       private
